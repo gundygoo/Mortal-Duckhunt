@@ -20,19 +20,23 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float mouseX = (Input.mousePosition.x);
-        float mouseY = (Input.mousePosition.y);
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
-        print(mousePos);
+        //float mouseX = (Input.mousePosition.x);
+        //float mouseY = (Input.mousePosition.y);
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
+        //print(mousePos);
 
         // Throw spear
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(0))
         {
-            print("true");
+            //print("true");
             // throw spear at mouse position
             // get mouse position
             // throw spear at position
             //print position of mouse
+            //float mouseX = (Input.mousePosition.x);
+            //float mouseY = (Input.mousePosition.y);
+            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
+            //print(mousePos);
            
             //Vector3 mousePos = Input.mousePosition;
             //targetPos = 
