@@ -31,9 +31,10 @@ public class BirdMove : MonoBehaviour {
 			Destroy (gameObject);
 
 			// Reduce spawners bird count
-			GameObject Spawner = GameObject.Find("Spawn1");
+			/*GameObject Spawner = GameObject.Find("Spawn1");
 			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
-			spawnBirds.birdCount-=1;
+			SpawnBirds.birdCount-=1;*/
+
 		}
 	}
 }
