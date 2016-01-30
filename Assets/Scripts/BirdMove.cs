@@ -23,8 +23,8 @@ public class BirdMove : MonoBehaviour {
 		{
 			//fuse both objects and set gravity
 
-			transform.position.x = -3;
-			transform.position.y = 0;
+			//transform.position.x = -3;
+			//transform.position.y = 0;
 
 			//negate the interaction with other objects (prevent it from damaging the player)
 			// Right now it just destroys the spear, we'll do more later
