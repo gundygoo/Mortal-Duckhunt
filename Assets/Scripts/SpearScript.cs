@@ -8,8 +8,8 @@ public class SpearScript : MonoBehaviour {
     //public GameObject spear;
     public Transform target;
     //public GameObject target;
-    public float speed;
-    //public GameObject player;
+    public float speed = 1;
+    public GameObject player;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
@@ -20,12 +20,16 @@ public class SpearScript : MonoBehaviour {
         //float mouseY = (Input.mousePosition.y);
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
         //print(mousePos);
-
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
 
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+        //float step = speed * Time.deltaTime;
+        //transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
-        print(transform.position);
+        //print(transform.position);
+        //Vector2 direction = target - playerPos;
+        transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+
     }
 }
