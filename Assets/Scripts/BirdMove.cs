@@ -41,6 +41,19 @@ public class BirdMove : MonoBehaviour {
 		{
 			//fuse both objects and set gravity
 			//negate the interaction with other objects (prevent it from damaging the player, reduce the number of remaining birds)
+
+			//transform.position.x = -3;
+			//transform.position.y = 0;
+
+			//negate the interaction with other objects (prevent it from damaging the player)
+			// Right now it just destroys the spear, we'll do more later
+			Destroy (gameObject);
+
+			// Reduce spawners bird count
+			/*GameObject Spawner = GameObject.Find("Spawn1");
+			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
+			SpawnBirds.birdCount-=1;*/
+
 		}
 	}
 }

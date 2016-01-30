@@ -7,10 +7,16 @@ public class PlayerScript : MonoBehaviour {
     public bool powerUp;
     public GameObject spearHand;
     public GameObject spear;
+    private Animator animator;
     //public GameObject player;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
-	
+
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     // Use this for initialization
 	void Start () {
         playerHealth = 100;
@@ -40,16 +46,19 @@ public class PlayerScript : MonoBehaviour {
            
             //Vector3 mousePos = Input.mousePosition;
             //targetPos = 
+            float speed = 2;
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(spear, transform.position, Quaternion.identity);
+            transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
             //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
         }
-        /*
+        
         // Swing sword
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            // swing sword
+            animator.SetTrigger("sword_attack");
         }
-
+        /*
         // Use Zeus' lightning (powerup)
         if (Input.GetKeyDown("space")) //KeyCode.Space
         {
