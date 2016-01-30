@@ -6,7 +6,7 @@ public class SpearScript : MonoBehaviour {
     //public int playerHealth;
     //public bool powerUp;
     //public GameObject spear;
-    public Transform target;
+    //public Transform target;
     //public GameObject target;
     public float speed = 1;
     public GameObject player;
@@ -21,7 +21,7 @@ public class SpearScript : MonoBehaviour {
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
         //print(mousePos);
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 playerPos = GameObject.Find("Player").transform.position;
+        //Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
 
         //float step = speed * Time.deltaTime;
