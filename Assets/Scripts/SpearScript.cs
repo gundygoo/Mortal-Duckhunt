@@ -18,7 +18,7 @@ public class SpearScript : MonoBehaviour {
     void Start()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z += 10;
+        mousePos.z += 9;
         //delay = 4;
         //Instantiate(spear, transform.position, Quaternion.identity);
         //transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);

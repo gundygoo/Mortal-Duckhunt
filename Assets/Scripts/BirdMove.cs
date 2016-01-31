@@ -7,6 +7,7 @@ public class BirdMove : MonoBehaviour {
     public bool turnPoint = false;
     public float speed;
     public Vector3 flyToPosition;
+	public Vector3 moveTo;
 	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -14,13 +15,14 @@ public class BirdMove : MonoBehaviour {
         Camera cam = Camera.main.GetComponent<Camera>();
         flyToPosition = new Vector3(Random.Range(0.2f, .8f), Random.Range(.5f, .8f), 1);
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
+		moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 5f;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (transform.position == worldPos)
+		if (transform.position == moveTo)
         {
             turnPoint = true;
             speed = 3f;
@@ -28,15 +30,15 @@ public class BirdMove : MonoBehaviour {
 
         if (!turnPoint)
         {
-            transform.position = Vector3.MoveTowards(transform.position, worldPos, Time.deltaTime * speed);
+            transform.position = Vector3.MoveTowards(transform.position, moveTo, Time.deltaTime * speed);
         }
         else
         {
-			transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -2, 0), Time.deltaTime * speed);
+			transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -2, -1), Time.deltaTime * speed);
         }
 	}
 
-	void OnCollisionEnter(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		if(other.gameObject.tag=="Spear")
 		{
@@ -48,6 +50,7 @@ public class BirdMove : MonoBehaviour {
 
 			Destroy (gameObject);
 			Destroy (this);
+			Destroy (other.gameObject);
 
 			// Reduce spawners bird count
 			/*GameObject Spawner = GameObject.Find("Spawn1");
@@ -60,6 +63,7 @@ public class BirdMove : MonoBehaviour {
 		}
 		if (other.gameObject.tag == "Player") {
 			Destroy (gameObject);
+			Debug.Log ("bird hit player");
 		}
 	}
 }

@@ -8,7 +8,8 @@ public class PlayerScript : MonoBehaviour {
     public GameObject spearHand;
     public GameObject spear;
     private Animator animator;
-    //public GameObject player;
+	private float throwStart = 0f;
+	private float throwCooldown = 1f;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
@@ -21,36 +22,16 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
         playerHealth = 100;
         powerUp = false;
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        //float mouseX = (Input.mousePosition.x);
-        //float mouseY = (Input.mousePosition.y);
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
-        //print(mousePos);
-
-        // Throw spear
-        if(Input.GetMouseButtonDown(0))
+        // Throw spear after cooldown
+		if(Input.GetMouseButtonDown(0) && Time.time > throwStart + throwCooldown)
         {
-            //print("true");
-            // throw spear at mouse position
-            // get mouse position
             // throw spear at position
-            //print position of mouse
-            //float mouseX = (Input.mousePosition.x);
-            //float mouseY = (Input.mousePosition.y);
-            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 0));
-            //print(mousePos);
-           
-            //Vector3 mousePos = Input.mousePosition;
-            //targetPos = 
-            //float speed = 2;
-            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(spear, transform.position, Quaternion.identity);
-            //transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
-            //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
+			throwStart = Time.time;
         }
         
         // Swing sword
@@ -58,6 +39,7 @@ public class PlayerScript : MonoBehaviour {
         {
             animator.SetTrigger("sword_attack");
         }
+
         /*
         // Use Zeus' lightning (powerup)
         if (Input.GetKeyDown("space")) //KeyCode.Space
