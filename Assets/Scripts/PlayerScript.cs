@@ -46,10 +46,10 @@ public class PlayerScript : MonoBehaviour {
            
             //Vector3 mousePos = Input.mousePosition;
             //targetPos = 
-            float speed = 2;
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //float speed = 2;
+            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(spear, transform.position, Quaternion.identity);
-            transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
             //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
         }
         

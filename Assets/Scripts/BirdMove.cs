@@ -7,6 +7,7 @@ public class BirdMove : MonoBehaviour {
     public bool turnPoint = false;
     public float speed;
     public Vector3 flyToPosition;
+	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
     void Awake() {
@@ -31,7 +32,7 @@ public class BirdMove : MonoBehaviour {
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -2, 0), Time.deltaTime * speed);
+			transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -2, 0), Time.deltaTime * speed);
         }
 	}
 
@@ -54,6 +55,9 @@ public class BirdMove : MonoBehaviour {
 			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
 			SpawnBirds.birdCount-=1;*/
 
+		}
+		if (other.gameObject.tag == "player_character") {
+			Destroy (gameObject);
 		}
 	}
 }
