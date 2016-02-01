@@ -13,7 +13,7 @@ public class ArmMovement : MonoBehaviour {
 	    Vector2 mouse = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         Vector3 objpos = Camera.main.WorldToViewportPoint(transform.position);
         Vector2 relobjpos = new Vector2(objpos.x-.1646f , objpos.y-.9310f);
-        Vector2 relmousepos = new Vector2(mouse.x - 0.5f, mouse.y - 0.5f) - relobjpos;
+        Vector2 relmousepos = new Vector2(mouse.x - 0.5f, mouse.y - 0.5f)/* - relobjpos*/;
         float angle = Vector2.Angle(Vector2.up, relmousepos);
         if(relmousepos.x>0)
         {
