@@ -8,6 +8,7 @@ public class BirdMove : MonoBehaviour {
     public float speed;
     public Vector3 flyToPosition;
 	public Vector3 moveTo;
+    public Health healthBar;
 	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -65,6 +66,7 @@ public class BirdMove : MonoBehaviour {
 			if (turnPoint) {
 				Destroy (gameObject);
 				Debug.Log ("bird hit player");
+                //healthBar.loseHealth(damage);
 			}
 		}
 	}
