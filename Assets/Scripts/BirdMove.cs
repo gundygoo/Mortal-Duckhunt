@@ -62,8 +62,10 @@ public class BirdMove : MonoBehaviour {
 
 		}
 		if (other.gameObject.tag == "Player") {
-			Destroy (gameObject);
-			Debug.Log ("bird hit player");
+			if (turnPoint) {
+				Destroy (gameObject);
+				Debug.Log ("bird hit player");
+			}
 		}
 	}
 }
