@@ -20,7 +20,7 @@ public class SpawnBirds : MonoBehaviour {
         //spawn a fast bird
         if(birdType == 0)
         {
-            Instantiate(fastBird, transform.position, Quaternion.identity);
+            Instantiate(bird, transform.position, Quaternion.identity);
         }
         //spawn a normal bird
         if(birdType == 1)
@@ -30,7 +30,7 @@ public class SpawnBirds : MonoBehaviour {
         //spawn a slow bird
         if(birdType == 2)
         {
-            Instantiate(slowBird, transform.position, Quaternion.identity);
+            Instantiate(bird, transform.position, Quaternion.identity);
         }
     }
 

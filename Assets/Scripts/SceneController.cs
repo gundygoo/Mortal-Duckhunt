@@ -6,10 +6,9 @@ public class SceneController : MonoBehaviour {
     public float timer = 5;
     public int whichSpawn;
     public int levelCap = 10;
-    public float roundTimer = 60f;
-    public GameObject spawn0;
     public GameObject spawn1;
     public GameObject spawn2;
+    public GameObject spawn3;
 
     //public SpawnBirds spawner;
 
@@ -21,6 +20,8 @@ public class SceneController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        timer -= Time.deltaTime;
+
         if (gameObject.GetComponent<Timer>().isPlayable)
         {
             if (timer <= 0)
@@ -31,17 +32,17 @@ public class SceneController : MonoBehaviour {
                 //spawn a fast bird
                 if (whichSpawn == 0)
                 {
-                    spawn0.GetComponent<SpawnBirds>().Spawn();
+                    spawn1.GetComponent<SpawnBirds>().Spawn();
                 }
                 //spawn a normal bird
                 if (whichSpawn == 1)
                 {
-                    spawn1.GetComponent<SpawnBirds>().Spawn();
+                    spawn2.GetComponent<SpawnBirds>().Spawn();
                 }
                 //spawn a slow bird
                 if (whichSpawn == 2)
                 {
-                    spawn2.GetComponent<SpawnBirds>().Spawn();
+                    spawn3.GetComponent<SpawnBirds>().Spawn();
                 }
                 timer = 5;
             }
