@@ -8,6 +8,10 @@ public class FastBirdMove : MonoBehaviour {
     public float speed;
     public Vector3 flyToPosition;
     public Vector3 moveTo;
+    public Health healthBar;
+    public int health = 1;
+    public int damage = 1;
+
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -17,7 +21,7 @@ public class FastBirdMove : MonoBehaviour {
         flyToPosition = new Vector3(Random.Range(0.2f, .8f), Random.Range(.5f, .8f), 1);
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
         moveTo = new Vector3(worldPos.x, worldPos.y, -1);
-        speed = 5f;
+        speed = 7f;
     }
 
     // Update is called once per frame
@@ -27,7 +31,7 @@ public class FastBirdMove : MonoBehaviour {
         if (transform.position == moveTo)
         {
             turnPoint = true;
-            speed = 3f;
+            speed = 5f;
         }
 
         if (!turnPoint)
@@ -50,17 +54,15 @@ public class FastBirdMove : MonoBehaviour {
             //negate the interaction with other objects (prevent it from damaging the player)
             // Right now it just destroys the spear, we'll do more later
 
-            Destroy(gameObject);
-            Destroy(this);
+            
             Destroy(other.gameObject);
 
-            // Reduce spawners bird count
-            /*GameObject Spawner = GameObject.Find("Spawn1");
-			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
-			SpawnBirds.birdCount-=1;*/
+            health -= 1;
 
-            //log statement for collision with spear
-            Debug.Log("spear hit bird");
+            if (health == 0)
+            {
+                Destroy(gameObject);
+            }
 
         }
         if (other.gameObject.tag == "Player")
@@ -68,9 +70,8 @@ public class FastBirdMove : MonoBehaviour {
             if (turnPoint)
             {
                 Destroy(gameObject);
-                Debug.Log("bird hit player");
+                //healthBar.loseHealth(damage);
             }
         }
     }
 }
-

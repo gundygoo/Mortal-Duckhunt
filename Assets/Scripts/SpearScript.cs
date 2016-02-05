@@ -22,6 +22,11 @@ public class SpearScript : MonoBehaviour {
         //delay = 4;
         //Instantiate(spear, transform.position, Quaternion.identity);
         //transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);
+
+		Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+		Vector3 dir = Input.mousePosition - pos;
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); 
     }
 
     // Update is called once per frame
@@ -34,7 +39,7 @@ public class SpearScript : MonoBehaviour {
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
-        transform.position = Vector3.MoveTowards(transform.position, mousePos, speed);//speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, 3*mousePos, speed);//speed * Time.deltaTime);
 
         delay += 1.0F * Time.deltaTime;
 
