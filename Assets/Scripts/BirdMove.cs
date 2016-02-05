@@ -9,6 +9,9 @@ public class BirdMove : MonoBehaviour {
     public Vector3 flyToPosition;
 	public Vector3 moveTo;
     public Health healthBar;
+    public int health = 2;
+    public int damage = 2;
+    public GameObject controller;
 	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -48,24 +51,25 @@ public class BirdMove : MonoBehaviour {
 
 			//negate the interaction with other objects (prevent it from damaging the player)
 			// Right now it just destroys the spear, we'll do more later
-
-			Destroy (gameObject);
-			Destroy (this);
+			
 			Destroy (other.gameObject);
+
+            health -= 1;
+
+            if (health == 0)
+            {
+                Destroy (gameObject);
+            }
 
 			// Reduce spawners bird count
 			/*GameObject Spawner = GameObject.Find("Spawn1");
 			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
 			SpawnBirds.birdCount-=1;*/
 
-			//log statement for collision with spear
-			Debug.Log("spear hit bird");
-
 		}
 		if (other.gameObject.tag == "Player") {
 			if (turnPoint) {
 				Destroy (gameObject);
-				Debug.Log ("bird hit player");
                 //healthBar.loseHealth(damage);
 			}
 		}
