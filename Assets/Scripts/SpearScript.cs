@@ -55,7 +55,7 @@ public class SpearScript : MonoBehaviour {
 
     void WaitAndDestroy()
     {
-        if (delay >= 4)
+        if (delay >= 3)
         {
             GameObject.Destroy(gameObject);
         }
