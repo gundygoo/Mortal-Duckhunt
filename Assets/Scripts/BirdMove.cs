@@ -9,7 +9,8 @@ public class BirdMove : MonoBehaviour {
     public Vector3 flyToPosition;
 	public Vector3 moveTo;
     public Health healthBar;
-	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
+    //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
+
 
     // Use this for initialization
     void Awake() {
@@ -69,5 +70,12 @@ public class BirdMove : MonoBehaviour {
                 //healthBar.loseHealth(damage);
 			}
 		}
+
+        if (other.gameObject.tag == "Sword")
+        {
+            Destroy(this);
+            Destroy(gameObject);
+            Debug.Log("sword hit bird");
+        }
 	}
 }
