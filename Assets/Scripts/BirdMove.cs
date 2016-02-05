@@ -11,8 +11,6 @@ public class BirdMove : MonoBehaviour {
 	public Vector3 moveTo;
     public int health = 2;
     public int damage = 2;
-    public GameObject controller;
-    public Slider healthBar;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
