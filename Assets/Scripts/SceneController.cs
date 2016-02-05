@@ -22,7 +22,7 @@ public class SceneController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         roundTimer -= Time.deltaTime;
-        timer -= Time.deltaTime;
+        
 
         if (roundTimer <= 0)
         {

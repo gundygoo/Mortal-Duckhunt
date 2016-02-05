@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
     public Slider timerSlider;
     public float timer;
+    public bool isPlayable = true;
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +21,9 @@ public class Timer : MonoBehaviour {
         timer -= Time.deltaTime;
         timerSlider.value = timer;
 
-        if(timer == 0)
+        if(timer <= 0)
         {
+            isPlayable = false;
             print("End game");
         }
 	}

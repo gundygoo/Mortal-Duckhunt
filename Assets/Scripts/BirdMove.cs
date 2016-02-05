@@ -80,7 +80,6 @@ public class BirdMove : MonoBehaviour {
 
         if (other.gameObject.tag == "Sword")
         {
-            //Destroy(this);
             Destroy(gameObject);
         }
 	}
