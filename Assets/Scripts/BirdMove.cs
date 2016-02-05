@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BirdMove : MonoBehaviour {
 
@@ -12,7 +13,9 @@ public class BirdMove : MonoBehaviour {
     public int health = 2;
     public int damage = 2;
     public GameObject controller;
-	//public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
+    public Slider healthBar;
+    public Health health;
+    //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
     void Awake() {
@@ -21,6 +24,7 @@ public class BirdMove : MonoBehaviour {
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
 		moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 5f;
+        //healthBar = GetComponent<Slider>();
     }
 	
 	// Update is called once per frame
@@ -71,7 +75,15 @@ public class BirdMove : MonoBehaviour {
 			if (turnPoint) {
 				Destroy (gameObject);
                 //healthBar.loseHealth(damage);
+                other.gameObject.GetComponent<Health>().loseHealth(5);
+                //health.loseHealth(5);
 			}
 		}
+
+        if (other.gameObject.tag == "Sword")
+        {
+            //Destroy(this);
+            Destroy(gameObject);
+        }
 	}
 }
