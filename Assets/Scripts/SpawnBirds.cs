@@ -3,35 +3,40 @@ using System.Collections;
 
 public class SpawnBirds : MonoBehaviour {
 
-    public float timer =  5;
     public GameObject bird;
-    public int birdCount = 0;
+    public GameObject fastBird;
+    public GameObject slowBird;
+    private int birdType;
 
 	// Use this for initialization
 	void Start () {
 	    
 	}
 	
-    void Spawn()
+    public void Spawn()
     {
-        Instantiate(bird, transform.position, Quaternion.identity);
-        birdCount += 1;
+        birdType = Random.Range(0, 3);
+
+        //spawn a fast bird
+        if(birdType == 0)
+        {
+            Instantiate(fastBird, transform.position, Quaternion.identity);
+        }
+        //spawn a normal bird
+        if(birdType == 1)
+        {
+            Instantiate(bird, transform.position, Quaternion.identity);
+        }
+        //spawn a slow bird
+        if(birdType == 2)
+        {
+            Instantiate(slowBird, transform.position, Quaternion.identity);
+        }
     }
 
-	// Update is called once per frame
-	void Update () {
-        if (birdCount < 10)
-        {
-            timer -= Time.deltaTime;
-        }
-        
-        if (timer <= 0)
-        {
-            if (birdCount < 10)
-            {
-                Spawn();
-                timer = 10;
-            }
-        }
-	}
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

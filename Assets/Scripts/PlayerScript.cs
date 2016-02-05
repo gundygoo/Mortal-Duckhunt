@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
     public bool powerUp;
     public GameObject spearHand;
     public GameObject spear;
-    private Animator animator;
+    public Animator animator;
 	private float throwStart = 0f;
 	private float throwCooldown = 1f;
     //public GameObject swordHand;

@@ -14,19 +14,14 @@ public class Health : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
-	}
-	
-	// Update is called once per frame
-	void Update () 
-    {
-	    
+        print("health" + healthCurrent);
 	}
 
     public void loseHealth(int damage)
     {
         healthCurrent -= damage;
         healthSlider.value = healthCurrent;
+        print(healthCurrent);
 
         /*
         if(dead)
