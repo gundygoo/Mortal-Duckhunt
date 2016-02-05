@@ -9,12 +9,10 @@ public class BirdMove : MonoBehaviour {
     public float speed;
     public Vector3 flyToPosition;
 	public Vector3 moveTo;
-    public Health healthBar;
     public int health = 2;
     public int damage = 2;
     public GameObject controller;
     public Slider healthBar;
-    public Health health;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
