@@ -6,7 +6,6 @@ public class SceneController : MonoBehaviour {
     public float timer = 5;
     public int whichSpawn;
     public int levelCap = 10;
-    public bool stillPlayable = true;
     public float roundTimer = 60f;
     public GameObject spawn0;
     public GameObject spawn1;
@@ -21,19 +20,11 @@ public class SceneController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        roundTimer -= Time.deltaTime;
-        
 
-        if (roundTimer <= 0)
-        {
-            stillPlayable = false;
-        }
-
-        if (stillPlayable)
+        if (gameObject.GetComponent<Timer>().isPlayable)
         {
             if (timer <= 0)
             {
-                //Spawn();
                 //call the spawn function of a spawn gameobject
                 whichSpawn = Random.Range(0, 3);
 
