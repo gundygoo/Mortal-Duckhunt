@@ -8,7 +8,6 @@ public class SlowBirdMove : MonoBehaviour {
     public float speed;
     public Vector3 flyToPosition;
     public Vector3 moveTo;
-    public Health healthBar;
     public int health = 3;
     public int damage = 3;
 
@@ -54,7 +53,6 @@ public class SlowBirdMove : MonoBehaviour {
             //negate the interaction with other objects (prevent it from damaging the player)
             // Right now it just destroys the spear, we'll do more later
 
-
             Destroy(other.gameObject);
 
             health -= 1;
@@ -64,6 +62,11 @@ public class SlowBirdMove : MonoBehaviour {
                 Destroy(gameObject);
             }
 
+            // Reduce spawners bird count
+            /*GameObject Spawner = GameObject.Find("Spawn1");
+			SpawnBirds spawnBirds = Spawner.GetComponent<SpawnBirds>();
+			SpawnBirds.birdCount-=1;*/
+
         }
         if (other.gameObject.tag == "Player")
         {
@@ -71,7 +74,14 @@ public class SlowBirdMove : MonoBehaviour {
             {
                 Destroy(gameObject);
                 //healthBar.loseHealth(damage);
+                other.gameObject.GetComponent<Health>().loseHealth(damage);
+                //health.loseHealth(5);
             }
+        }
+
+        if (other.gameObject.tag == "Sword")
+        {
+            Destroy(gameObject);
         }
     }
 }

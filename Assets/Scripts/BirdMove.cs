@@ -71,7 +71,7 @@ public class BirdMove : MonoBehaviour {
 			if (turnPoint) {
 				Destroy (gameObject);
                 //healthBar.loseHealth(damage);
-                other.gameObject.GetComponent<Health>().loseHealth(5);
+                other.gameObject.GetComponent<Health>().loseHealth(damage);
                 //health.loseHealth(5);
 			}
 		}
