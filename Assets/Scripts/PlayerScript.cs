@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour {
     public Animator animator;
 	private float throwStart = 0f;
 	private float throwCooldown = 1f;
+    public static bool isAnimated;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
@@ -37,7 +38,9 @@ public class PlayerScript : MonoBehaviour {
         // Swing sword
         if (Input.GetMouseButtonDown(1))
         {
+            isAnimated = true;
             animator.SetTrigger("sword_attack");
+            isAnimated = false;
         }
 
         /*

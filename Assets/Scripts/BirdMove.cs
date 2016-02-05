@@ -71,14 +71,11 @@ public class BirdMove : MonoBehaviour {
 			}
 		}
 
-        if (other.gameObject.tag == "Sword")
+        if (other.gameObject.tag == "Sword" && PlayerScript.isAnimated == true)
         {
-            if ()
-            {
-                Destroy(this);
-                Destroy(gameObject);
-                Debug.Log("sword hit bird");
-            }
+            Destroy(this);
+            Destroy(gameObject);
+            Debug.Log("sword hit bird");
         }
 	}
 }
