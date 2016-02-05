@@ -73,9 +73,12 @@ public class BirdMove : MonoBehaviour {
 
         if (other.gameObject.tag == "Sword")
         {
-            Destroy(this);
-            Destroy(gameObject);
-            Debug.Log("sword hit bird");
+            if ()
+            {
+                Destroy(this);
+                Destroy(gameObject);
+                Debug.Log("sword hit bird");
+            }
         }
 	}
 }
