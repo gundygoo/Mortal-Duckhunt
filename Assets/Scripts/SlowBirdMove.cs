@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SlowBirdMove : MonoBehaviour {
 
@@ -10,7 +11,8 @@ public class SlowBirdMove : MonoBehaviour {
     public Vector3 moveTo;
     public int health = 3;
     public int damage = 3;
-
+    public int slowBaseScore = 300;
+    public GUIText scoreText;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -60,7 +62,13 @@ public class SlowBirdMove : MonoBehaviour {
             if (health == 0)
             {
                 Destroy(gameObject);
+                OnDestroyScore();
+                GameObject.Find("SceneController").GetComponent<SceneController>().slowAmountKilled++;
+                GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(slowBaseScore);
+
             }
+
+            GameObject.Find("SceneController").GetComponent<SceneController>().spearHit++;
 
             // Reduce spawners bird count
             /*GameObject Spawner = GameObject.Find("Spawn1");
@@ -81,7 +89,17 @@ public class SlowBirdMove : MonoBehaviour {
 
         if (other.gameObject.tag == "Sword")
         {
+            slowBaseScore += 50;
             Destroy(gameObject);
+            OnDestroyScore();
+            GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(slowBaseScore);
         }
+    }
+
+    void OnDestroyScore()
+    {
+        scoreText.text = slowBaseScore.ToString();
+        Instantiate(scoreText, transform.position, Quaternion.identity);
+        Destroy(scoreText, 1.0f);
     }
 }

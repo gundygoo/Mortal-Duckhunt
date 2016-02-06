@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 	private float throwStart = 0f;
 	private float throwCooldown = 1f;
     public static bool isAnimated;
+    public int spearsThrown;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
@@ -33,6 +34,7 @@ public class PlayerScript : MonoBehaviour {
             // throw spear at position
             Instantiate(spear, transform.position, Quaternion.identity);
 			throwStart = Time.time;
+            spearsThrown++;
         }
         
         // Swing sword

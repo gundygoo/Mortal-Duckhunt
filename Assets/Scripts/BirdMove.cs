@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class BirdMove : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class BirdMove : MonoBehaviour {
     public Health healthBar;
     public int health = 2;
     public int damage = 2;
+    public int normalBaseScore = 100;
+    public GUIText scoreText;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
 
@@ -59,7 +62,13 @@ public class BirdMove : MonoBehaviour {
             if (health == 0)
             {
                 Destroy(gameObject);
+                OnDestroyScore();
+                GameObject.Find("SceneController").GetComponent<SceneController>().normalAmountKilled++;
+                GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(normalBaseScore);
+  
             }
+
+            GameObject.Find("SceneController").GetComponent<SceneController>().spearHit++;
 
             // Reduce spawners bird count
             /*GameObject Spawner = GameObject.Find("Spawn1");
@@ -80,7 +89,17 @@ public class BirdMove : MonoBehaviour {
 
         if (other.gameObject.tag == "Sword")
         {
+            normalBaseScore += 50;
             Destroy(gameObject);
+            OnDestroyScore();
+            GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(normalBaseScore);
         }
+    }
+
+    void OnDestroyScore()
+    {
+        scoreText.text = normalBaseScore.ToString();
+        Instantiate(scoreText, transform.position, Quaternion.identity);
+        Destroy(scoreText, 1.0f);
     }
 }

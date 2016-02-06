@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FastBirdMove : MonoBehaviour {
 
@@ -10,7 +11,8 @@ public class FastBirdMove : MonoBehaviour {
     public Vector3 moveTo;
     public int health = 1;
     public int damage = 1;
-
+    public int fastBaseScore = 200;
+    public GUIText scoreText;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -59,8 +61,14 @@ public class FastBirdMove : MonoBehaviour {
 
             if (health == 0)
             {
+                OnDestroyScore();
                 Destroy(gameObject);
+                GameObject.Find("SceneController").GetComponent<SceneController>().fastAmountKilled++;
+                GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(fastBaseScore);
             }
+
+            //controller.spearhit
+            GameObject.Find("SceneController").GetComponent<SceneController>().spearHit++;
 
             // Reduce spawners bird count
             /*GameObject Spawner = GameObject.Find("Spawn1");
@@ -81,7 +89,17 @@ public class FastBirdMove : MonoBehaviour {
 
         if (other.gameObject.tag == "Sword")
         {
+            fastBaseScore += 50;
             Destroy(gameObject);
+            OnDestroyScore();
+            GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(fastBaseScore);
         }
+    }
+
+    void OnDestroyScore()
+    {
+        scoreText.text = fastBaseScore.ToString();
+        Instantiate(scoreText, transform.position, Quaternion.identity);
+        Destroy(scoreText, 1.0f);
     }
 }

@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour {
         {
             isPlayable = false;
             print("End game");
+            gameObject.GetComponent<SceneController>().TallyScore();
         }
 	}
 }
