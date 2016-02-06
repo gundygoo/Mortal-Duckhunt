@@ -17,7 +17,7 @@ public class BirdMove : MonoBehaviour {
     // Use this for initialization
     void Awake() {
         Camera cam = Camera.main.GetComponent<Camera>();
-        flyToPosition = new Vector3(Random.Range(0.2f, .8f), Random.Range(.5f, .8f), 1);
+        flyToPosition = new Vector3(Random.Range(0.2f, .8f), Random.Range(.5f, .8f), -1);
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
 		moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 5f;
