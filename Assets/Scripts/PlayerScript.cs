@@ -28,6 +28,22 @@ public class PlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		// Flip the character when it is needed
+		Vector3 flip = transform.localScale;
+		Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+		float WorldxPos = Camera.main.ScreenToWorldPoint(mousePosition).x;
+		if (WorldxPos > gameObject.transform.position.x)
+		{
+			flip.x = -1;
+			transform.localScale = flip;
+		}
+		else
+		{
+			flip.x = 1;
+			transform.localScale = flip;
+		}
+
         // Throw spear after cooldown
 		if(Input.GetMouseButtonDown(0) && Time.time > throwStart + throwCooldown)
         {
