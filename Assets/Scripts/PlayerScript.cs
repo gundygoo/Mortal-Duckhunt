@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour {
     public GameObject spear;
     public Animator animator;
 	private float throwStart = 0f;
-	private float throwCooldown = 1f;
+	private float throwCooldown = 0.25f;
     public static bool isAnimated;
     public int spearsThrown;
     //public GameObject swordHand;
