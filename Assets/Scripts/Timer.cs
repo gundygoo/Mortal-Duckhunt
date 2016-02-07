@@ -6,14 +6,15 @@ public class Timer : MonoBehaviour {
     public Slider timerSlider;
     public float timer;
     public bool isPlayable = true;
+    public GameObject curtain;
 
 	// Use this for initialization
 	void Start () {
-	    /*if(Application.loadedLevelName == "UIExperimentScene")
+        /*if(Application.loadedLevelName == "UIExperimentScene")
         {
             timer = 60;
         }*/
-        timer = 60;
+        timer = 5;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +26,8 @@ public class Timer : MonoBehaviour {
         {
             isPlayable = false;
             print("End game");
+
+            curtain.transform.position = Vector3.MoveTowards(curtain.transform.position, new Vector3(0, 0, -5), .5f);
             gameObject.GetComponent<SceneController>().TallyScore();
         }
 	}
