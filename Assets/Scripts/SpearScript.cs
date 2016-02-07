@@ -40,7 +40,7 @@ public class SpearScript : MonoBehaviour {
         //Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
         
-		transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);//speed * Time.deltaTime);
+		transform.position = Vector3.MoveTowards(transform.position, mousePos, speed);//speed * Time.deltaTime);
 
         delay += Time.deltaTime;
 
