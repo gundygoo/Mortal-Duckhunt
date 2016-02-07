@@ -12,7 +12,9 @@ public class SlowBirdMove : MonoBehaviour {
     public int health = 3;
     public int damage = 3;
     public int slowBaseScore = 300;
-    public Text scoreText;
+    public GameObject score300;
+    public GameObject score350;
+    public GameObject player;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -23,7 +25,7 @@ public class SlowBirdMove : MonoBehaviour {
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
         moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 3f;
-        scoreText = GameObject.Find("scoreText").GetComponent<Text>();
+        player = GameObject.Find("player_character");
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class SlowBirdMove : MonoBehaviour {
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, -2, -1), Time.deltaTime * speed);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * speed);
         }
     }
 
@@ -99,9 +101,19 @@ public class SlowBirdMove : MonoBehaviour {
 
     void OnDestroyScore()
     {
-        scoreText.text = slowBaseScore.ToString();
+        if (slowBaseScore == 300)
+        {
+            Instantiate(score300, transform.position, Quaternion.identity);
+            
+        }
+        else
+        {
+            Instantiate(score350, transform.position, Quaternion.identity);
+            
+        }
 
-        Instantiate(scoreText, transform.position, Quaternion.identity);
+        //scoreText.text = slowBaseScore.ToString();
+        //Instantiate(scoreText, transform.position, Quaternion.identity);
         //Destroy(scoreText, 1.0f);
     }
 }

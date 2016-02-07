@@ -35,12 +35,12 @@ public class PlayerScript : MonoBehaviour {
 		float WorldxPos = Camera.main.ScreenToWorldPoint(mousePosition).x;
 		if (WorldxPos > gameObject.transform.position.x)
 		{
-			flip.x = -1;
+			flip.x = -.75f;
 			transform.localScale = flip;
 		}
 		else
 		{
-			flip.x = 1;
+			flip.x = .75f;
 			transform.localScale = flip;
 		}
 

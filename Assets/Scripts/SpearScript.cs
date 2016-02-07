@@ -8,7 +8,7 @@ public class SpearScript : MonoBehaviour {
     //public GameObject spear;
     //public Transform target;
     //public GameObject target;
-    public float speed = 4;
+    public float speed = 2;
     public GameObject player;
     public Vector3 mousePos;
     private float delay;
@@ -39,9 +39,10 @@ public class SpearScript : MonoBehaviour {
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
-		transform.position = Vector3.MoveTowards(transform.position, mousePos+transform.position, speed);//speed * Time.deltaTime);
+        
+		transform.position = Vector3.MoveTowards(transform.position, mousePos, speed * Time.deltaTime);//speed * Time.deltaTime);
 
-        delay += 1.0F * Time.deltaTime;
+        delay += Time.deltaTime;
 
         WaitAndDestroy();
         //float step = speed * Time.deltaTime;
@@ -55,7 +56,7 @@ public class SpearScript : MonoBehaviour {
 
     void WaitAndDestroy()
     {
-        if (delay >= 3)
+        if (delay >= 2)
         {
             GameObject.Destroy(gameObject);
         }

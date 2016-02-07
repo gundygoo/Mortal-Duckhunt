@@ -1,0 +1,128 @@
+fileFormatVersion: 2
+guid: b79d6be8bd8ed074bb7fa213a80e6dc0
+timeCreated: 1454875791
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fast-duck_0
+    21300002: fast-duck_1
+    21300004: fast-duck_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fast-duck_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 78
+        width: 201
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25.5, y: 51.5}
+        - {x: -100.5, y: 6.5}
+        - {x: -100.5, y: -51.5}
+        - {x: -9.5, y: -51.5}
+        - {x: 91.5, y: -42.5}
+        - {x: 100.5, y: -29.5}
+        - {x: 100.5, y: 27.5}
+        - {x: 80.5, y: 51.5}
+    - name: fast-duck_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 207
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 103.5, y: 44}
+        - {x: 103.5, y: 84}
+        - {x: 100.5, y: 99}
+        - {x: 53.5, y: 137}
+        - {x: -39.5, y: 137}
+        - {x: -68.5, y: 126}
+        - {x: -103.5, y: 78}
+        - {x: -103.5, y: 51}
+        - {x: -70.5, y: -9}
+        - {x: -78.5, y: -19}
+        - {x: -82.5, y: -67}
+        - {x: -61.5, y: -121}
+        - {x: -26.5, y: -137}
+        - {x: 34.5, y: -137}
+        - {x: 72.5, y: -120}
+        - {x: 91.5, y: -34}
+        - {x: 77.5, y: 8}
+    - name: fast-duck_2
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 88
+        width: 201
+        height: 103
+      alignment: 9
+      pivot: {x: 0.15980826, y: 0.4676161}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.12146, y: 35.83554}
+        - {x: -32.12146, y: -5.164459}
+        - {x: -17.12146, y: -37.16446}
+        - {x: -13.12146, y: -36.16446}
+        - {x: 104.87854, y: -48.16446}
+        - {x: 168.87854, y: -48.16446}
+        - {x: 168.87854, y: 0.8355408}
+        - {x: 98.87854, y: 54.83554}
+        - {x: -7.12146, y: 54.83554}
+        - {x: -29.12146, y: 49.83554}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

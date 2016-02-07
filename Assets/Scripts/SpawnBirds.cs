@@ -4,7 +4,7 @@ using System.Collections;
 public class SpawnBirds : MonoBehaviour {
 
     public GameObject bird;
-    public GameObject fastBird;
+    public GameObject fastDuck;
     public GameObject slowBird;
     private int birdType;
 
@@ -30,7 +30,7 @@ public class SpawnBirds : MonoBehaviour {
         //spawn a slow bird
         if(birdType == 2)
         {
-            Instantiate(fastBird, transform.position, Quaternion.identity);
+            Instantiate(fastDuck, transform.position, Quaternion.identity);
         }
     }
 
