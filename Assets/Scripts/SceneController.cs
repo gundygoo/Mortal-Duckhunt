@@ -14,6 +14,7 @@ public class SceneController : MonoBehaviour {
     public int normalAmountKilled;
     public int fastAmountKilled;
     public int slowAmountKilled;
+    public int thrown;
 
     //public SpawnBirds spawner;
 
@@ -56,9 +57,10 @@ public class SceneController : MonoBehaviour {
 
     public void TallyScore()
     {
-        spearAccuracy = spearHit/GameObject.Find("player_character").GetComponent<PlayerScript>().spearsThrown;
+        thrown = GameObject.Find("player_character").GetComponent<PlayerScript>().spearsThrown;
+        spearAccuracy = (float)spearHit / (float)thrown * 100;
         print(GameObject.Find("player_character").GetComponent<PlayerScript>().spearsThrown);
-        print(spearAccuracy);
+        print(spearAccuracy + "%");
         print(normalAmountKilled);
         print(fastAmountKilled);
         print(slowAmountKilled);

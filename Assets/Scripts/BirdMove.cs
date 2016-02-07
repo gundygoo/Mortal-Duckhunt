@@ -13,7 +13,7 @@ public class BirdMove : MonoBehaviour {
     public int health = 2;
     public int damage = 2;
     public int normalBaseScore = 100;
-    public GUIText scoreText;
+    public Text scoreText;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
 
@@ -24,6 +24,7 @@ public class BirdMove : MonoBehaviour {
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
 		moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 5f;
+        scoreText = GameObject.Find("scoreText").GetComponent<Text>();
     }
 	
 	// Update is called once per frame
@@ -99,7 +100,8 @@ public class BirdMove : MonoBehaviour {
     void OnDestroyScore()
     {
         scoreText.text = normalBaseScore.ToString();
+       
         Instantiate(scoreText, transform.position, Quaternion.identity);
-        Destroy(scoreText, 1.0f);
+        //Destroy(scoreText, 1.0f);
     }
 }

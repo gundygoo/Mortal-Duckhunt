@@ -12,7 +12,7 @@ public class FastBirdMove : MonoBehaviour {
     public int health = 1;
     public int damage = 1;
     public int fastBaseScore = 200;
-    public GUIText scoreText;
+    public Text scoreText;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
     // Use this for initialization
@@ -23,6 +23,7 @@ public class FastBirdMove : MonoBehaviour {
         worldPos = cam.ViewportToWorldPoint(flyToPosition);
         moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 7f;
+        scoreText = GameObject.Find("scoreText").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -100,6 +101,6 @@ public class FastBirdMove : MonoBehaviour {
     {
         scoreText.text = fastBaseScore.ToString();
         Instantiate(scoreText, transform.position, Quaternion.identity);
-        Destroy(scoreText, 1.0f);
+        //Destroy(scoreText, 1.0f);
     }
 }
