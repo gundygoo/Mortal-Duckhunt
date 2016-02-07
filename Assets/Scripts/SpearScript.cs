@@ -39,8 +39,9 @@ public class SpearScript : MonoBehaviour {
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //Vector3 playerPos = GameObject.Find("Player").transform.position;
         //spear.transform.Translate(new Vector3(0.0f, 0.0f, 0.0f));
-        
-		transform.position = Vector3.MoveTowards(transform.position, mousePos, speed);//speed * Time.deltaTime);
+
+        //transform.position = Vector3.MoveTowards(transform.position, mousePos, speed);//speed * Time.deltaTime);
+        transform.Translate(.5f, 0, 0);
 
         delay += Time.deltaTime;
 
