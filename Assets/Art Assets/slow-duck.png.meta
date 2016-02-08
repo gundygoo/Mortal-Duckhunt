@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 785c8eb2ce49c4f4483d2e0f167d8821
+timeCreated: 1454964465
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slow-duck_0
+    21300002: slow-duck_1
+    21300004: slow-duck_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slow-duck_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 226
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 113, y: -50}
+        - {x: 52, y: -16}
+        - {x: 73, y: 148}
+        - {x: 65, y: 155}
+        - {x: 19, y: 155}
+        - {x: 15, y: 152}
+        - {x: -8, y: 127}
+        - {x: -25, y: 103}
+        - {x: -73, y: 5}
+        - {x: -113, y: -113}
+        - {x: -113, y: -154}
+        - {x: -102, y: -155}
+        - {x: -48, y: -155}
+        - {x: 90, y: -143}
+        - {x: 101, y: -141}
+        - {x: 113, y: -91}
+    - name: slow-duck_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 4
+        width: 188
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 94, y: -29.5}
+        - {x: 60, y: 40.5}
+        - {x: 82, y: 72.5}
+        - {x: 75, y: 128.5}
+        - {x: 87, y: 167.5}
+        - {x: 45, y: 193.5}
+        - {x: -48, y: 193.5}
+        - {x: -87, y: 170.5}
+        - {x: -71, y: 89.5}
+        - {x: -81, y: 82.5}
+        - {x: -78, y: 74.5}
+        - {x: -73, y: 15.5}
+        - {x: -94, y: -32.5}
+        - {x: -94, y: -124.5}
+        - {x: -82, y: -145.5}
+        - {x: -65, y: -145.5}
+        - {x: -19, y: -193.5}
+        - {x: 18, y: -193.5}
+        - {x: 28, y: -182.5}
+        - {x: 90, y: -130.5}
+        - {x: 94, y: -115.5}
+    - name: slow-duck_2
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 73
+        width: 226
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 24, y: 114}
+        - {x: -9, y: 155}
+        - {x: -70, y: 155}
+        - {x: -73, y: 150}
+        - {x: -52, y: -32}
+        - {x: -88, y: -38}
+        - {x: -113, y: -53}
+        - {x: -113, y: -79}
+        - {x: -105, y: -115}
+        - {x: -98, y: -144}
+        - {x: -93, y: -142}
+        - {x: 18, y: -127}
+        - {x: 74, y: -155}
+        - {x: 108, y: -155}
+        - {x: 113, y: -153}
+        - {x: 113, y: -110}
+        - {x: 109, y: -85}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
