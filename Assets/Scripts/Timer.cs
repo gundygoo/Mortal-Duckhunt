@@ -26,9 +26,13 @@ public class Timer : MonoBehaviour {
         {
             isPlayable = false;
             print("End game");
-
+            if (Application.loadedLevelName == "Level1")
+                Application.LoadLevel("Level1Poseidon");
+            if (Application.loadedLevelName == "Level1Poseidon")
+                Application.LoadLevel("Hades Level");
             curtain.transform.position = Vector3.MoveTowards(curtain.transform.position, new Vector3(0, 0, -5), .5f);
             gameObject.GetComponent<SceneController>().TallyScore();
+            
         }
 	}
 }
