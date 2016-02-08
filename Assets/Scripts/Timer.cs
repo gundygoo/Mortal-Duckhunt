@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour {
         {
             timer = 60;
         }*/
-        timer = 5;
+        timer = 60;
 	}
 	
 	// Update is called once per frame
