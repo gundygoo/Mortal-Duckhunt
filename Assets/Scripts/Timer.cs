@@ -29,10 +29,10 @@ public class Timer : MonoBehaviour {
 
             if (Application.loadedLevelName == "Level1")
                 Application.LoadLevel("LevelZeus");
-            if (Application.loadedLevelName == "Level1")
-                Application.LoadLevel("Level1Poseidon");
-            /*if (Application.loadedLevelName == "LevelZeus")
+            /*if (Application.loadedLevelName == "Level1")
                 Application.LoadLevel("Level1Poseidon");*/
+            if (Application.loadedLevelName == "LevelZeus")
+                Application.LoadLevel("Level1Poseidon");
             if (Application.loadedLevelName == "Level1Poseidon")
                 Application.LoadLevel("Hades Level");
             curtain.transform.position = Vector3.MoveTowards(curtain.transform.position, new Vector3(0, 0, -5), .5f);
