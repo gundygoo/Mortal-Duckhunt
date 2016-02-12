@@ -6,6 +6,7 @@ public class SlowBirdMove : MonoBehaviour {
 
     public Vector3 worldPos;
     public bool turnPoint = false;
+    public bool flyAway = false;
     public float speed;
     public Vector3 flyToPosition;
     public Vector3 moveTo;
@@ -38,13 +39,17 @@ public class SlowBirdMove : MonoBehaviour {
             speed = 1f;
         }
 
-        if (!turnPoint)
+        if (!turnPoint && !flyAway)
         {
             transform.position = Vector3.MoveTowards(transform.position, moveTo, Time.deltaTime * speed);
         }
-        else
+        else if (turnPoint && !flyAway)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * speed);
+        }
+         else if (turnPoint && flyAway)
+        {
+            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
         }
     }
 
@@ -83,9 +88,10 @@ public class SlowBirdMove : MonoBehaviour {
         {
             if (turnPoint)
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
                 //healthBar.loseHealth(damage);
                 other.gameObject.GetComponent<Health>().loseHealth(damage);
+                flyAway = true;
                 //health.loseHealth(5);
             }
         }
