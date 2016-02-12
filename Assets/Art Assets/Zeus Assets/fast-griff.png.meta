@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 7fd5d0b2067aa0e4f8ec1dde5c7050df
+timeCreated: 1455129749
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fast-griff_0
+    21300002: fast-griff_1
+    21300004: fast-griff_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: fast-griff_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 181
+        height: 290
+      alignment: 9
+      pivot: {x: 0.91239786, y: 0.09734539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52.144012, y: 261.76984}
+        - {x: -145.14401, y: 261.76984}
+        - {x: -165.14401, y: 242.76984}
+        - {x: -165.14401, y: 73.76984}
+        - {x: -154.14401, y: 43.769836}
+        - {x: -92.14401, y: -17.230164}
+        - {x: -69.14401, y: -28.230164}
+        - {x: 15.855988, y: -28.230164}
+        - {x: 15.855988, y: 58.769836}
+        - {x: -11.144012, y: 175.76984}
+    - name: fast-griff_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 268
+        height: 267
+      alignment: 9
+      pivot: {x: 0.5523953, y: 0.4446404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46.04193, y: 148.281}
+        - {x: -54.04193, y: 140.281}
+        - {x: -148.04193, y: -2.7189865}
+        - {x: -148.04193, y: -25.718987}
+        - {x: -136.04193, y: -24.718987}
+        - {x: -121.04193, y: -17.718987}
+        - {x: -113.04193, y: -13.7189865}
+        - {x: -101.04193, y: -4.7189865}
+        - {x: -120.04193, y: -21.718987}
+        - {x: -122.04193, y: -50.718987}
+        - {x: -79.04193, y: -54.718987}
+        - {x: -53.04193, y: -118.71899}
+        - {x: 69.95807, y: -118.71899}
+        - {x: 119.95807, y: -57.718987}
+        - {x: 119.95807, y: 102.28101}
+        - {x: 70.95807, y: 148.281}
+    - name: fast-griff_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 145
+        width: 181
+        height: 290
+      alignment: 9
+      pivot: {x: 0.095768206, y: 0.09734539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 137.66595, y: 261.76984}
+        - {x: 60.665955, y: 261.76984}
+        - {x: 40.665955, y: 257.76984}
+        - {x: -1.3340454, y: 160.76984}
+        - {x: 33.665955, y: 89.76984}
+        - {x: -17.334045, y: 39.769836}
+        - {x: -17.334045, y: -28.230164}
+        - {x: 74.665955, y: -28.230164}
+        - {x: 136.66595, y: -3.2301636}
+        - {x: 163.66595, y: 49.769836}
+        - {x: 163.66595, y: 214.76984}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
