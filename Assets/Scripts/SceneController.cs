@@ -71,11 +71,11 @@ public class SceneController : MonoBehaviour {
         }
         if (SceneManager.GetActiveScene().name == "Level1Poseidon")
         {
-            timer = Random.Range(1.5f, 4.0f);
+            timer = Random.Range(1.0f, 3.0f);
         }
         if (SceneManager.GetActiveScene().name == "LevelZeus")
         {
-            timer = Random.Range(1.0f, 3.0f);
+            timer = Random.Range(1.4f, 4.0f);
 
         }
         if (SceneManager.GetActiveScene().name == "Hades Level")

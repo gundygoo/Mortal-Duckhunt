@@ -92,6 +92,8 @@ public class FastBirdMove : MonoBehaviour {
                 //healthBar.loseHealth(damage);
                 other.gameObject.GetComponent<Health>().loseHealth(damage);
                 flyAway = true;
+                gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+                Destroy(gameObject, 3f);
                 //health.loseHealth(5);
             }
         }
