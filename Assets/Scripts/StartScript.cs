@@ -10,10 +10,9 @@ public class StartScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown("enter"))
+        if (Input.GetKeyDown("return"))
         {
             Application.LoadLevel("Level1");
-
         }
     }
 }
