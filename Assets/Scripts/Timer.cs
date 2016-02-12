@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour {
         {
             timer = 60;
         }*/
-        timer = 10;
+        timer = 60;
         curtain = GameObject.Find("curtain");
 	}
 	
