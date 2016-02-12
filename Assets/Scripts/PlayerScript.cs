@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour {
     public Animator animator;
 	private float throwStart = 0f;
 	private float throwCooldown = 0.5f;
+    private float swingStart = 0f;
+    private float swingEnd = 2.5f;
     public static bool isAnimated;
     public int spearsThrown;
     //public GameObject swordHand;
@@ -54,10 +56,11 @@ public class PlayerScript : MonoBehaviour {
         }
         
         // Swing sword
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)&& Time.time>swingStart+swingEnd)
         {
             isAnimated = true;
             animator.SetTrigger("sword_attack");
+            swingStart = Time.time;
             isAnimated = false;
         }
 

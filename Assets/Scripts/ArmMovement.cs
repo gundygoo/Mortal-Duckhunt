@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class ArmMovement : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
         	
@@ -17,9 +16,9 @@ public class ArmMovement : MonoBehaviour {
          float angle = Vector2.Angle(Vector2.up, relmousepos);
    
         Quaternion quat = Quaternion.identity;
-         quat.eulerAngles = new Vector3(0, 0, angle);
-         transform.rotation = quat;
-     
-
+        quat.eulerAngles = new Vector3(0, 0, angle);
+        transform.rotation = quat;
+        
     }
+  
 }
