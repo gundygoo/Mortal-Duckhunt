@@ -29,9 +29,10 @@ public class Health : MonoBehaviour {
         healthSlider.value = healthCurrent;
         print(healthCurrent);
 
-        if (healthCurrent == 0f)
+        if (healthCurrent <= 0f)
         {
             SceneManager.LoadScene("LoseScoreScene");
+            print("end game");
         }
     }
 
