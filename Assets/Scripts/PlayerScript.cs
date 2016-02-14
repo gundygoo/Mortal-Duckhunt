@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour {
     public Animator animator;
 	private float throwStart = 0f;
 	private float throwCooldown = 0.5f;
+    private float swingStart = 0f;
+    private float swingEnd = 2.5f;
     public static bool isAnimated;
     public int spearsThrown;
 	public GameObject[] gameObjects;
@@ -55,16 +57,17 @@ public class PlayerScript : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) && Time.time > throwStart + throwCooldown)
         {
             // throw spear at position
-            Instantiate(spear, transform.position, Quaternion.identity);
+            Instantiate(spear, transform.position + new Vector3(-.2f, .5f, -1f), Quaternion.identity);
 			throwStart = Time.time;
             spearsThrown++;
         }
         
         // Swing sword
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)&& Time.time>swingStart+swingEnd)
         {
             isAnimated = true;
             animator.SetTrigger("sword_attack");
+            swingStart = Time.time;
             isAnimated = false;
         }
 

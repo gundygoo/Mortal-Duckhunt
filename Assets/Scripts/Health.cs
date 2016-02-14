@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour {
     private int healthStart = 20;
@@ -14,8 +15,13 @@ public class Health : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        print("health" + healthCurrent);
+        //print("health" + healthCurrent);
 	}
+
+    void Update()
+    {
+        
+    }
 
     public void loseHealth(int damage)
     {
@@ -23,12 +29,10 @@ public class Health : MonoBehaviour {
         healthSlider.value = healthCurrent;
         print(healthCurrent);
 
-        /*
-        if(dead)
+        if (healthCurrent == 0f)
         {
-            dead
+            SceneManager.LoadScene("LoseScoreScene");
         }
-        */
     }
 
     void gainHealth()
