@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0ab66bd8704d7184e88b856ba601a7b9
-timeCreated: 1455313219
+timeCreated: 1455486858
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,7 +56,7 @@ TextureImporter:
     - name: fast_seamonster_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 15
         y: 240
         width: 78
         height: 87
@@ -75,7 +75,7 @@ TextureImporter:
     - name: fast_seamonster_1
       rect:
         serializedVersion: 2
-        x: 62
+        x: 124
         y: 7
         width: 396
         height: 510
@@ -83,11 +83,13 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 160, y: -124}
+      - - {x: 152, y: -162}
+        - {x: 160, y: -124}
         - {x: 198, y: -87}
         - {x: 198, y: -77}
         - {x: 168, y: -71}
         - {x: 183, y: -51}
+        - {x: 165, y: -11}
         - {x: 161, y: 23}
         - {x: 156, y: 21}
         - {x: 135, y: 15}
@@ -98,6 +100,9 @@ TextureImporter:
         - {x: 111, y: 233}
         - {x: 118, y: 243}
         - {x: 90, y: 255}
+        - {x: 28, y: 255}
+        - {x: 15, y: 252}
+        - {x: -12, y: 255}
         - {x: -86, y: 255}
         - {x: -113, y: 243}
         - {x: -110, y: 235}
@@ -117,34 +122,15 @@ TextureImporter:
         - {x: -151, y: -164}
         - {x: -137, y: -198}
         - {x: -92, y: -241}
-        - {x: -54, y: -255}
-        - {x: 57, y: -255}
+        - {x: -48, y: -255}
+        - {x: 38, y: -255}
+        - {x: 56, y: -252}
         - {x: 93, y: -236}
         - {x: 132, y: -197}
-        - {x: 152, y: -162}
-      - - {x: -198, y: 24}
-        - {x: -198, y: -21}
-        - {x: -195, y: -24}
-        - {x: -180, y: -24}
-        - {x: -177, y: -22}
-        - {x: -177, y: 18}
-        - {x: -191, y: 24}
-      - - {x: 188, y: -14}
-        - {x: 188, y: -18}
-        - {x: 194, y: -23}
-        - {x: 197, y: -23}
-        - {x: 198, y: -22}
-        - {x: 198, y: -3}
-        - {x: 195, y: -4}
-      - - {x: 195, y: 15}
-        - {x: 197, y: 13}
-        - {x: 198, y: 13}
-        - {x: 198, y: 19}
-        - {x: 195, y: 18}
     - name: fast_seamonster_2
       rect:
         serializedVersion: 2
-        x: 450
+        x: 559
         y: 238
         width: 71
         height: 91
