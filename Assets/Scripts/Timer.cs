@@ -39,7 +39,7 @@ public class Timer : MonoBehaviour {
                 Application.LoadLevel(Application.loadedLevel + 1);
             }
             
-            print("End game");
+            //print("End game");
             /*if (Application.loadedLevelName == "Level1")
                 Application.LoadLevel("Level1Poseidon");
             if (Application.loadedLevelName == "Level1Poseidon")
