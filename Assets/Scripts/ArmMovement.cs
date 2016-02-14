@@ -11,8 +11,8 @@ public class ArmMovement : MonoBehaviour {
 	void Update () {
         Vector2 mouse = Camera.main.ScreenToViewportPoint(Input.mousePosition);
          Vector3 objpos = Camera.main.WorldToViewportPoint(transform.position);
-         Vector2 relobjpos = new Vector2(objpos.x-.1646f , objpos.y-.9310f);
-         Vector2 relmousepos = new Vector2(mouse.x -.5f, mouse.y-.35f) ;
+         Vector2 relobjpos = new Vector2(objpos.x - 0.08929224f, objpos.y - 0.1312685f);
+         Vector2 relmousepos = new Vector2(mouse.x -.5f, mouse.y -.2f);
          float angle = Vector2.Angle(Vector2.up, relmousepos);
    
         Quaternion quat = Quaternion.identity;

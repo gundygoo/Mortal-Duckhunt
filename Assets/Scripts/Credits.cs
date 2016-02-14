@@ -7,6 +7,11 @@ public class Credits : MonoBehaviour {
     public int speed = 1;
     public string level;
     public bool scrolling = true;
+
+    void Start()
+    {
+        Destroy(GameObject.Find("ScoreKeeper"));
+    }
 	
 	// Update is called once per frame
 	void Update () {
