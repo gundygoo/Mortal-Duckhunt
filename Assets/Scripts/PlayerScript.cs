@@ -50,7 +50,7 @@ public class PlayerScript : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) && Time.time > throwStart + throwCooldown)
         {
             // throw spear at position
-            Instantiate(spear, transform.position, Quaternion.identity);
+            Instantiate(spear, transform.position + new Vector3(-.2f, .5f, -1f), Quaternion.identity);
 			throwStart = Time.time;
             spearsThrown++;
         }
