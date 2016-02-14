@@ -7,7 +7,7 @@ public class MouseTracker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //Cursor.visible = false;
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
@@ -15,5 +15,6 @@ public class MouseTracker : MonoBehaviour {
         cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPos.z = -9;
         cursor.transform.position = cursorPos;
+
 	}
 }
