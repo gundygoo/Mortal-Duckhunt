@@ -8,4 +8,9 @@ public class Button : MonoBehaviour {
         int i = Application.loadedLevel;
         Application.LoadLevel(i + 1);
     }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(0);
+    }
 }

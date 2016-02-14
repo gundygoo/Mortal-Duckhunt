@@ -14,6 +14,7 @@ public class PlayerScript : MonoBehaviour {
     private float swingEnd = 2.5f;
     public static bool isAnimated;
     public int spearsThrown;
+    public AudioClip throwClip;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
