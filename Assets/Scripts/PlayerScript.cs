@@ -71,7 +71,7 @@ public class PlayerScript : MonoBehaviour {
             isAnimated = false;
         }
 
-		if (Input.GetKeyDown ("space")/* && powerUp == true*/) {
+		if (Input.GetKeyDown ("space") && powerUp == true) {
 			DestroyAllBirds ();
 			powerUp = false;
 			GameObject.Find("SceneController").GetComponent<SceneController>().lightningKill++;
