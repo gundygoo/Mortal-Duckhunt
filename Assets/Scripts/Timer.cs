@@ -10,11 +10,7 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        /*if(Application.loadedLevelName == "UIExperimentScene")
-        {
-            timer = 60;
-        }*/
-        timer = 20;
+        timer = 60;
 	}
 	
 	// Update is called once per frame

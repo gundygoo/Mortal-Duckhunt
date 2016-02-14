@@ -17,6 +17,7 @@ public class SceneController : MonoBehaviour {
     public int fastAmountKilled;
     public int slowAmountKilled;
     public int thrown;
+	public int lightningKill;
 
     //public SpawnBirds spawner;
 

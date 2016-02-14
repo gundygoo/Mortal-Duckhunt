@@ -12,12 +12,19 @@ public class PlayerScript : MonoBehaviour {
 	private float throwCooldown = 0.5f;
     public static bool isAnimated;
     public int spearsThrown;
+	public GameObject[] gameObjects;
+	public GameObject score1000;
+	public GameObject lightning;
+	public Vector3 scorePosition;
+	public Vector3 lightningPosition;
     //public GameObject swordHand;
     //static Vector3 mousePos = Input.mousePosition;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+		scorePosition = new Vector3(0, 1.5f, -1);
+		lightningPosition = new Vector3 (0, 0, 0);
     }
 
     // Use this for initialization
@@ -61,14 +68,21 @@ public class PlayerScript : MonoBehaviour {
             isAnimated = false;
         }
 
-        /*
-        // Use Zeus' lightning (powerup)
-        if (Input.GetKeyDown("space")) //KeyCode.Space
-        {
-            // Create lighting
-            // Defeat enemies on-screen
-            //powerUp = false;
-        }
-         * */
+		if (Input.GetKeyDown ("space")/* && powerUp == true*/) {
+			DestroyAllBirds ();
+			powerUp = false;
+			GameObject.Find("SceneController").GetComponent<SceneController>().lightningKill++;
+			GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(1000);
+			Instantiate(score1000, scorePosition, Quaternion.identity);
+			Instantiate (lightning, lightningPosition, Quaternion.identity);
+		}
 	}
+
+	void DestroyAllBirds()
+	{
+		gameObjects = GameObject.FindGameObjectsWithTag ("Bird");
+		for(var i = 0; i < gameObjects.Length; i++)
+			Destroy(gameObjects[i]);
+	}
+
 }
