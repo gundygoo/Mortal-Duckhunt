@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        timer = 5;
+        timer = 60;
         curtain = GameObject.Find("curtain");
 	}
 	
