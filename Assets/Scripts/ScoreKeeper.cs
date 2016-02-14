@@ -34,7 +34,7 @@ public class ScoreKeeper : MonoBehaviour {
             hitAccuracy = (float)spearHit / (float)spearThrown * 100;
         }
 
-        if (Application.loadedLevelName == "ScoreScene")
+        if (Application.loadedLevelName == "ScoreScene" || Application.loadedLevelName == "LoseScoreScene")
         {
             normal = GameObject.Find("Normal Birds Hit Text").GetComponent<Text>();
             fast = GameObject.Find("Fast Birds Hit Text").GetComponent<Text>();
@@ -49,7 +49,7 @@ public class ScoreKeeper : MonoBehaviour {
             Application.LoadLevel("ScoreScene");
         }*/
 
-        if(Application.loadedLevelName == "ScoreScene")
+        if (Application.loadedLevelName == "ScoreScene" || Application.loadedLevelName == "LoseScoreScene")
         {
             ScoreTally();
         }
