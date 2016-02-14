@@ -12,7 +12,7 @@ public class LightningBarScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(GameObject.Find("PlayerScript").GetComponent<PlayerScript>().powerUp == true)
+		if(GameObject.Find("player_character").GetComponent<PlayerScript>().powerUp == true)
 			rend.enabled = true;
 		else
 		{

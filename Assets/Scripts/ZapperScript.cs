@@ -22,6 +22,7 @@ public class ZapperScript : MonoBehaviour {
 		if ((int)timer == ZapperSpawnTime) {
 			if (GameObject.Find ("amphora(Clone)") == null) {
 				Instantiate (Zapper, screenPosition, Quaternion.identity);
+				Destroy (gameObject);
 			}
 		}
 	}
