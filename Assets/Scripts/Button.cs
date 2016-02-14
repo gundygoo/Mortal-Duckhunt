@@ -11,6 +11,7 @@ public class Button : MonoBehaviour {
 
     public void RestartGame()
     {
+        Destroy(GameObject.Find("ScoreKeeper"));
         Application.LoadLevel(0);
     }
 }
