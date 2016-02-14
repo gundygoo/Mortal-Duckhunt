@@ -17,6 +17,9 @@ public class BirdMove : MonoBehaviour {
     public GameObject score100;
     public GameObject score150;
     public GameObject player;
+    public AudioSource source;
+    public AudioClip clip;
+    public AudioClip spearClip;
     //public Vector3 targetPlayer = GameObject.FindWithTag("player_character").transform;
 
 
@@ -28,6 +31,7 @@ public class BirdMove : MonoBehaviour {
 		moveTo = new Vector3(worldPos.x, worldPos.y, -1);
         speed = 5f;
         player = GameObject.Find("player_character");
+        source = gameObject.GetComponent<AudioSource>();
     }
 	
 	// Update is called once per frame
@@ -64,12 +68,15 @@ public class BirdMove : MonoBehaviour {
             // Right now it just destroys the spear, we'll do more later
 
             Destroy(other.gameObject);
+            source.PlayOneShot(spearClip);
 
             health -= 1;
 
             if (health == 0)
             {
+                GameObject.Find("SceneController").GetComponent<AudioSource>().PlayOneShot(clip);
                 Destroy(gameObject);
+                
                 OnDestroyScore();
                 GameObject.Find("SceneController").GetComponent<SceneController>().normalAmountKilled++;
                 GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>().AddToScore(normalBaseScore);
@@ -91,6 +98,7 @@ public class BirdMove : MonoBehaviour {
                 //Destroy(gameObject);
                 //healthBar.loseHealth(damage);
                 other.gameObject.GetComponent<Health>().loseHealth(damage);
+                other.GetComponent<AudioSource>().Play();
                 flyAway = true;
                 gameObject.GetComponent<PolygonCollider2D>().enabled = false;
                 Destroy(gameObject, 3f);

@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
     public static bool isAnimated;
     public int spearsThrown;
     public AudioClip throwClip;
+    public AudioClip nukeClip;
     private AudioSource source;
 	public GameObject[] gameObjects;
 	public GameObject score1000;
@@ -35,6 +36,7 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
         playerHealth = 100;
         powerUp = false;
+        source = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -87,6 +89,7 @@ public class PlayerScript : MonoBehaviour {
 	void DestroyAllBirds()
 	{
 		gameObjects = GameObject.FindGameObjectsWithTag ("Bird");
+        source.PlayOneShot(nukeClip);
 		for(var i = 0; i < gameObjects.Length; i++)
 			Destroy(gameObjects[i]);
 	}

@@ -18,13 +18,14 @@ public class SceneController : MonoBehaviour {
     public int slowAmountKilled;
     public int thrown;
 	public int lightningKill;
+    public AudioSource source;
 
     //public SpawnBirds spawner;
 
     // Use this for initialization
     void Start () {
         SceneTimer();
-
+        source = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame

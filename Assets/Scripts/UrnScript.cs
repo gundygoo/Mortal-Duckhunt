@@ -5,6 +5,7 @@ public class UrnScript : MonoBehaviour {
 
 
 	private float delay;
+    public AudioClip clip;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +19,7 @@ public class UrnScript : MonoBehaviour {
 	{
 
 		if (other.gameObject.tag == "Spear") {
+            GameObject.Find("SceneController").GetComponent<AudioSource>().PlayOneShot(clip);
 			Destroy(other.gameObject);
 			Destroy (gameObject);
 			GameObject.Find ("player_character").GetComponent<PlayerScript> ().powerUp = true;
@@ -25,7 +27,8 @@ public class UrnScript : MonoBehaviour {
 		}
 
 		if (other.gameObject.tag == "Sword") {
-			Destroy (gameObject);
+            GameObject.Find("SceneController").GetComponent<AudioSource>().PlayOneShot(clip);
+            Destroy (gameObject);
 			GameObject.Find ("player_character").GetComponent<PlayerScript> ().powerUp = true;
 			print ("PowerUp status is: " + GameObject.Find ("player_character").GetComponent<PlayerScript> ().powerUp);
 		}
