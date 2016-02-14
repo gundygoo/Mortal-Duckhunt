@@ -30,13 +30,13 @@ public class Credits : MonoBehaviour {
 
     IEnumerator waitFor()
     {
-        yield return new WaitForSeconds(45);
+        yield return new WaitForSeconds(68);
         Application.LoadLevel(level);
     }
 
     IEnumerator scrollTime()
     {
-        yield return new WaitForSeconds(33);
+        yield return new WaitForSeconds(58);
         scrolling = false;
     }
 }
